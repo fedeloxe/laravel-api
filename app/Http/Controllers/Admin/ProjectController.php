@@ -50,7 +50,7 @@ class ProjectController extends Controller
     public function store(StoreProjectRequest $request)
     {
         $new = $request->validated();
-        if ($request->hasFile('cover_image')) {
+        if ($request->has('cover_image')) {
             $path = Storage::disk('public')->put('project_images', $request->cover_image);
 
             $new['cover_image'] = $path;
