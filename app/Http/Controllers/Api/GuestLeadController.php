@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 use App\Models\GuestLead;
@@ -21,7 +21,7 @@ class GuestLeadController extends Controller
             'surname' => 'required',
             'phone' => 'required',
             'email' => 'required',
-            'message' => 'required',
+            'content' => 'required',
 
 
         ]);
